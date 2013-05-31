@@ -2,17 +2,16 @@ using UnityEngine;
 using System.Collections;
 
 public class MainViewContainerController : MonoBehaviour {
-	public GameObject firstListView;
+	public int MenuLevelCount {get; set;} 
 	
-	
-
-	// Use this for initialization
-	void Start () {
-	
+	/*
+	public MainViewContainerController() {
+		this.MenuLevelCount = 10;
 	}
+	*/
 	
-	// Update is called once per frame
-	void Update () {
-	
+	public void OnAddSubView()
+	{
+		this.MenuLevelCount++;
 	}
 }

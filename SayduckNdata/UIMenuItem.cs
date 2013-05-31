@@ -67,6 +67,7 @@ public class UIMenuItem : EZData.Context
 		
 		if (item["menu-items"] != null)
 		{
+			UIHelper.Instance.addChildView();
 			foreach (IDictionary submenu  in (IList)item["menu-items"]) 
 			{
 				UIMenuItem submenuItem = new UIMenuItem();
