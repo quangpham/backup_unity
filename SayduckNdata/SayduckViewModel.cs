@@ -58,6 +58,8 @@ public class SayduckViewModel : MonoBehaviour
 		IDictionary uiconfig = (IDictionary)Json.Deserialize (response);
 		
 		if (uiconfig["menu-items"] != null) {
+			UIHelper.Instance.addFirstListView();
+			
 			foreach (IDictionary item in (IList)uiconfig["menu-items"]) 
 			{
 				UIMenuItem menuItem = new UIMenuItem();
