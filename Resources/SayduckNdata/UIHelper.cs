@@ -25,7 +25,7 @@ public class UIHelper : MonoBehaviour {
 
 	public void addFirstListView ()
 	{
-		GameObject view = (GameObject)Instantiate(Resources.Load("_Ndata/FirstListView"));
+		GameObject view = (GameObject)Instantiate(Resources.Load("SayduckNdata/FirstListView"));
 		view.transform.parent = mainViewContainer.transform;
 		view.transform.localScale = new Vector3 (1,1,1);
 		
@@ -39,7 +39,7 @@ public class UIHelper : MonoBehaviour {
 		mainViewContainer.GetComponent<MainViewContainerController>().OnAddSubView();
 		int childLevel = mainViewContainer.GetComponent<MainViewContainerController>().MenuLevelCount;
 		
-		GameObject view = (GameObject)Instantiate(Resources.Load("_Ndata/ChildListView"));
+		GameObject view = (GameObject)Instantiate(Resources.Load("SayduckNdata/ChildListView"));
 		view.name = "Child_" + childLevel.ToString();
 		view.transform.parent = mainViewContainer.transform;
 		view.transform.localScale = new Vector3 (1,1,1);
