@@ -1,7 +1,7 @@
 using UnityEngine;
 using System.Collections;
 
-public class MainViewContainerController : UIViewController {
+public class FirstListViewController : UIViewController {
 	
 	public GameObject appBackground;
 	public UIPanel logoHeaderPanel;
