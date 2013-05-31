@@ -21,5 +21,6 @@ public class MainViewContainerController : MonoBehaviour {
 	{
 		CurrentPosition--;
 		if (CurrentPosition<0) CurrentPosition = 0;
-		TweenPosition.Begin(gameObject, 0.5f, new Vector3 (-Screen.width*CurrentPosition, gameObject.transform.localPosition.y, gameObject.transform.localPosition.z));	}
+		TweenPosition.Begin(gameObject, 0.5f, new Vector3 (-Screen.width*CurrentPosition, gameObject.transform.localPosition.y, gameObject.transform.localPosition.z));	
+	}
 }
