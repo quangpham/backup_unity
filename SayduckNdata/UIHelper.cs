@@ -5,6 +5,7 @@ using System.Collections;
 public class UIHelper : MonoBehaviour {
 	
 	private static UIHelper instance = null;
+	private GameObject mainViewContainer = GameObject.Find("MainViewContainer");
 	
 	private UIHelper ()
 	{
@@ -26,18 +27,17 @@ public class UIHelper : MonoBehaviour {
 
 	public void addFirstListView ()
 	{
-		GameObject mainViewContainer = GameObject.Find("MainViewContainer");
-		
 		GameObject view = (GameObject)Instantiate(Resources.Load("_Ndata/FirstListView"));
 		view.transform.parent = mainViewContainer.transform;
 		view.transform.localScale = new Vector3 (1,1,1);
 		
+		// QUANG NEED TO MOVE TO CONSTRUCTOR
 		mainViewContainer.GetComponent<MainViewContainerController>().MenuLevelCount = 0;
+		mainViewContainer.GetComponent<MainViewContainerController>().CurrentPosition = 0;
 	}
 	
 	public void addChildView ()
 	{
-		GameObject mainViewContainer = GameObject.Find("MainViewContainer");
 		mainViewContainer.GetComponent<MainViewContainerController>().OnAddSubView();
 		int childLevel = mainViewContainer.GetComponent<MainViewContainerController>().MenuLevelCount;
 		
@@ -54,5 +54,15 @@ public class UIHelper : MonoBehaviour {
 		}
 		NguiItemsSourceBinding itemsSourceBinding = GameObject.Find("Child_" + childLevel.ToString() + "/PanelsParent/3.ListViewPanel/DraggablePanel/UIGrid").GetComponent<NguiItemsSourceBinding>();
 		itemsSourceBinding.Path = itemSourceBindingString;
+	}
+	
+	public void slideNext()
+	{
+		mainViewContainer.GetComponent<MainViewContainerController>().OnSlideNext();
+	}
+	
+	public void slideBack()
+	{
+		mainViewContainer.GetComponent<MainViewContainerController>().OnSlideBack();
 	}
 }

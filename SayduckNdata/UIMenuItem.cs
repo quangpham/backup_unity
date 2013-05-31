@@ -85,7 +85,7 @@ public class UIMenuItem : EZData.Context
 	
 	public void UIMenuItemClick ()
 	{
-		//GameObject.Find("RootPanelController").GetComponent<RootPanelController>().SlideNext();
+		UIHelper.Instance.slideNext();
 	}
 
 }
