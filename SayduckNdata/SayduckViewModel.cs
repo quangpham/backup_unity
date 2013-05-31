@@ -10,12 +10,12 @@ public class FirstViewUi : EZData.Context
 	private readonly EZData.Collection<UIMenuItem> _privateRootUIMenuItem = new EZData.Collection<UIMenuItem>(false);
 	public EZData.Collection<UIMenuItem> RootUIMenuItem { get { return _privateRootUIMenuItem; } }
 	#endregion
-	/*
-	public void BackButtonOnClick()
+
+	public void BackButtonClick()
 	{
-		GameObject.Find("RootPanelController").GetComponent<RootPanelController>().SlideBack();
+		UIHelper.Instance.slideBack();
 	}
-	*/
+
 }
  
 public class SayduckViewModel : MonoBehaviour

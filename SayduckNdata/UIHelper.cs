@@ -7,9 +7,7 @@ public class UIHelper : MonoBehaviour {
 	private static UIHelper instance = null;
 	private GameObject mainViewContainer = GameObject.Find("MainViewContainer");
 	
-	private UIHelper ()
-	{
-	}
+	private UIHelper () {}
 	
 	public static UIHelper Instance {
 		get {

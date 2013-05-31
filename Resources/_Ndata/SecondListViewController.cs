@@ -21,6 +21,7 @@ public class SecondListViewController : UIViewController {
 		
 		appBackground.gameObject.transform.localScale = new Vector3(Screen.width, Screen.height, 0);
 		listPanel.clipRange = new Vector4( 0.0f, -(Screen.height / 2) + navSliceHeight + (scrContentHeightBottom / 2), Screen.width, scrContentHeightBottom);
+		//listPanel.clipRange = new Vector4(0,0,200,200);
 		Debug.Log (listPanel.clipRange.ToString());
 		listDraggablePanel.clipRange = new Vector4( 0.0f, -(Screen.height / 2) + navSliceHeight + (scrContentHeightBottom / 2), Screen.width, scrContentHeightBottom);
 	}
